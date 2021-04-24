@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #845EC2;
+            --text-color: #FBEAFF;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            /* border: 1px solid red; */
+        }
+
+        .grid {
+
+            height: 400px;
+            width: 210px;
+            margin: 0 auto;
+            background-color: aqua;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .grid .item {
+            /* width: 21px;
+            height: 27px; */
+            width: 21px;
+            height: 37px;
+
+
+        }
+
+        #restart {
+            display: block;
+            margin: auto;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 10px 18px;
+            outline: none;
+            border: none;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+            margin-top: 18px;
+        }
+
+        p {
+            color: #00C9A7;
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        ol {
+            color: #4D8076;
+            font-size: 18px;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width:700px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <button id="restart">Restart</button>
+        <p>Score : <span id="score">0</span></p>
+        <p> Timer : <span class="timer">20</span> </p>
+
+        <div class="grid">
+        </div>
+        <ol type="1">
+            <li>Timer is set to 20 seconds</li>
+            <li>If the user clicks on the color and if it matches with neighbouring colors, then the score will increase
+                and
+                the matched colors will turn into white. If you click on the white colors, the score will not be updated
+            </li>
+            <li>White colors beckons that the clicked items are already matched up, hence unselectable again</li>
+            <li>Colors can be added or downed using the colors named array in js file.On top of that, the game
+                complexity will be determined by the number of colors. Timer can also be increased or decreased to gauge
+                the game complexity </li>
+        </ol>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
